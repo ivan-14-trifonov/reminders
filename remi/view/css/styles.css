@@ -1,0 +1,191 @@
+/*для компьютеров*/
+@media screen and (min-device-width: 480px) {
+    .body { --k: 1; }
+}
+
+/*для телефонов*/
+@media screen and (max-device-width: 480px) {
+    .body { --k: 3; }
+}
+
+.body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: calc(100% * var(--k));
+    color: #333;
+    --color-primary: #782578;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: calc(20px * var(--k));
+    display: flex;
+}
+
+.header__h1 {
+    font-weight: 500;
+    margin: auto;
+    margin-left: 0;
+}
+
+.wrapper {
+    margin: 30px 50px;
+}
+
+.listOfReminders {
+    display: flex;
+}
+
+.reminder {
+    padding: calc(10px * var(--k));
+    border: calc(2px * var(--k)) solid var(--color-primary);
+    margin: 7px;
+    border-radius: calc(10px * var(--k));
+    display: flex;
+    flex-direction: column;
+}
+
+.button-add {
+    cursor: pointer;
+    color: var(--color-primary);
+    text-align: center;
+    flex-direction: row;
+}
+
+.button-add:hover{
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.button-edit {
+    cursor: pointer;
+}
+
+.button-delete {
+    cursor: pointer;
+}
+
+.reminder__str {
+    margin: auto 0;
+    display: flex;
+}
+
+.plus {
+    margin: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 20px;
+}
+
+.create {
+    margin: auto;
+}
+
+.time {
+    color: #888;
+    font-weight: 300;
+}
+
+.reminder__repeat {
+    color: #888;
+    font-weight: 300;
+    margin: 0 auto;
+    margin-left: 0;
+}
+
+.reminder__edit {
+    margin: 0 auto;
+    margin-right: calc(10px * var(--k));
+}
+
+.reminder__delete {
+    margin: 0;
+}
+
+.reminder__img {
+    width: calc(20px * var(--k));
+}
+
+/*Стили всплывающего окна*/
+
+.pop-up {
+    position: fixed;
+    left: 0; right: 0;
+
+    margin: auto;
+    background: #fff;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #000;
+}
+
+.close {
+    border-radius:3em;
+    margin-left:95%;
+    background:#212121;
+    color:#fff;
+    font-size:1.25em;
+    padding:.4em .7em;
+    cursor:pointer;
+}
+
+.form_container {
+    margin: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__textarea {
+    width: 90%;
+    margin: auto;
+    resize: none;
+    height: 50vh;
+    font-size: calc(16px * var(--k));
+}
+
+.form__block {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    margin-top: 10px;
+}
+
+.form__el {
+    font-size: calc(16px * var(--k));
+}
+
+.form__date_time
+{
+    margin: auto;
+}
+
+.pop-up-container {
+    position: fixed;
+    left: 0; right: 0; top: 0; bottom: 0;
+    background: #000;
+    opacity: .5;
+}
+
+/*для компьютеров*/
+@media screen and (min-device-width: 480px) {
+    .listOfReminders { flex-wrap: wrap; }
+    .reminder { max-width: 340px; width: 100%; }
+    .pop-up { top: 0; width: 60%; margin-top: 15vh; }
+    .form__block { flex-direction: row; }
+    .form__el { margin: auto; }
+}
+
+/*для телефонов*/
+@media screen and (max-device-width: 480px) {
+    .header { padding-left: 20px; }
+    .listOfReminders { flex-direction: column; }
+    .pop-up { top: 0; bottom: 0; height: 90%; width: 90%; }
+    .form__block { flex-direction: column; }
+    .form__el { margin: 10px auto; }
+}
