@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/pdoconfig.php';
+require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/Reminder.php';
 require_once __DIR__ . '/ReminderService.php';
 require_once __DIR__ . '/Change.php';
